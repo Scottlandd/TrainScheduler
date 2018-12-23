@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center bg-info text-white">
+            <h1>Train Schedule</h1>
+            <h3>Choo Choo!!</h3>
+            <hr class="my-4">
+            <div class="container">
+                <h3>Current time: </h3>
+                <div id="current-time"></div>
+            </div>
+        </div>
+        <table class="table table-dark">
+                <thead>
+                        <tr>
+                          <th scope="col">Train Name</th>
+                          <th scope="col">Train Destination</th>
+                          <th scope="col">First Departure Time</th>
+                          <th scope="col">Departure Frequency</th>
+                        </tr>
+                </thead>
+                <tbody id="departure-list">
+                    
+                </tbody>
+            
+            <!-- use jQuery (app.js) to list departures here -->
+        </table>
+        <br>
+        <div class="col-fluid">
+            <div class="card">
+            <div class="card-header bg-info font-weight-bold">Add a Departure</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="trainNameInput">Train Name</label>
+                        <input type="text" class="form-control" id="train-name-input" placeholder="Name your train">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainDestinationInput">Destination</label>
+                        <input type="text" class="form-control" id="destination-input" placeholder="Where to???">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrainTimeInput">First Train Time</label>
+                        <input type="datetime" class="form-control" id="first-train-input" placeholder="(HH:mm - military time)">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencyInput">Frequency (min)</label>
+                        <input type="number" class="form-control" id="frequency-input">
+                    </div>
+                    <button class="btn-lg btn-info" id="submit-info" type="submit">Submit</button>
+                </div>
+            </div>
+                
+            
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
